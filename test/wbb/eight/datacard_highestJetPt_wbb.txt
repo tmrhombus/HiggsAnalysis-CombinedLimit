@@ -1,0 +1,34 @@
+imax 1
+jmax 8
+kmax *
+---------------
+shapes * * Renamed_Datacard_oldGT_2j2525_2bt_highestJetPt.root $PROCESS $PROCESS_$SYSTEMATIC
+---------------
+bin hzz
+observation 5946.0
+------------------------------
+bin             hzz	hzz	hzz	hzz	hzz	hzz	hzz	hzz	hzz	
+process         Wbb	Wcc	TOP	T	Tbar	tW	Z_jets	WZ	QCD	
+process         0	1	2	3	4	5	6	7	8	
+rate		978.5	58.2	2980.7	667.95	216.2	97.3	165.0	121.7	170.1
+--------------------------------
+bgTOP    lnN    -	-	1.2	-	-	-	-	-	-
+bgT      lnN    -	-	-	1.08	-	-	-	-	-
+bgTbar   lnN    -	-	-	-	1.10	-	-	-	-
+bgtW     lnN    -	-	-	-	-	1.3	-	-	-
+bgZjet   lnN    -	-	-	-	-	-	1.1	-	-
+bgWZ     lnN    -	-	-	-	-	-	-	1.17	-
+gW	 lnN    -	-	-	-	-	-	-	-	-
+bgWcc	 lnN	-	1.5	-	-	-	-	-	-	-	
+qcd	 lnN	-	-	-	-	-	-	-	-	1.5	
+lumi	 lnN	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	-
+muonE	 lnN	1.01	1.01	1.01	1.01	1.01	1.01	1.01	1.01	-
+muon	 shape	1	1	1	1	1	-	1	1	-
+jet      shape	1	1	1	1	1	-	1	1	-	
+jetUCE	 shape	1	1	1	1	1	-	1	1	-	
+beff	 lnN	1.12	-	-	-	-	-	1.12	1.12	-	
+#bfake	 lnN	-	-	-	-	-	-	-	-	-	
+beffT	 lnN	-	-	1.06	1.06	1.06	1.06	-	-	-	
+beffC	 lnN	-	1.15	-	-	-	-	-	-	-	
+
+

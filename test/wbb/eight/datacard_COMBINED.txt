@@ -1,0 +1,37 @@
+Combination of SIG=datacard_J1Pt_2T.txt, TOP=datacard_mJ3J4_TOPT.txt
+imax 2 number of bins
+jmax 8 number of processes minus 1
+kmax 20 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *    SIG  Renamed_Datacard_oldGT_2j2525_2bt_highestJetPt.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *    TOP  Renamed_Datacard_oldGT_4j2525_2bt_mJ3J4.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          SIG     TOP   
+observation  5943.0  4990.0
+----------------------------------------------------------------------------------------------------------------------------------
+bin    	  SIG        SIG        SIG        SIG        SIG        SIG        SIG        SIG        SIG        TOP        TOP        TOP        TOP        TOP      
+process	  Wbb        Tbar       tW         TOP        Z_jets     Wcc        T          QCD        WZ         Wbb        tW         TOP        T          QCD      
+process	  0          1          2          3          4          5          6          7          8          0          2          3          6          7        
+rate   	  978.1      216.2      96.7       2979.1     165.0      58.2       667.95     170.1      121.7      50.9	87.4	   4487.1     97.8       52.4  
+----------------------------------------------------------------------------------------------------------------------------------
+beff   	lnN       1.12       -          -          -          1.12       -          -          -          1.12       1.12       -          -          -          -        
+beffC  	lnN       -          -          -          -          -          1.15       -          -          -          -          -          -          -          -        
+beffT  	lnN       -          1.06       1.06       1.06       -          -          1.06       -          -          -          -          -          -          -        
+#beffT 	 lnN       -          1.12       1.12       1.12       -          -          1.12       -          -          -          -          -           -          -
+bgT    	lnN       -          -          -          -          -          -          1.08       -          -          -          -          -          -          -        
+bgT1   	lnN       -          -          -          -          -          -          -          -          -          -          -          -          1.08       -        
+bgTOP  	lnN       -          -          -          1.2        -          -          -          -          -          -          -          1.2        -          -        
+bgTbar 	lnN       -          1.1        -          -          -          -          -          -          -          -          -          -          -          -        
+bgWZ   	lnN       -          -          -          -          -          -          -          -          1.17       -          -          -          -          -        
+bgWcc  	lnN       -          -          -          -          -          1.5        -          -          -          -          -          -          -          -        
+bgZjet 	lnN       -          -          -          -          1.1        -          -          -          -          -          -          -          -          -        
+bgtW   	lnN       -          -          1.3        -          -          -          -          -          -          -          -          -          -          -        
+bgtW1  	lnN       -          -          -          -          -          -          -          -          -          -          1.3        -          -          -        
+effT   	lnN       -          -          -          -          -          -          -          -          -          -          -          1.06       1.06       -        
+jet    	shape     1.0        1.0        -          1.0        1.0        1.0        1.0        -          1.0        -          1.0        1.0        1.0        -        
+jetUCE 	shape     1.0        1.0        -          1.0        1.0        1.0        1.0        -          1.0        -          1.0        1.0        1.0        -        
+lumi   	lnN       1.022      1.022      1.022      1.022      1.022      1.022      1.022      -          1.022      1.022      1.022      1.022      1.022      -        
+muon   	shape     1.0        1.0        -          1.0        1.0        1.0        1.0        -          1.0        -          1.0        1.0        1.0        -        
+muonE  	lnN       1.01       1.01       1.01       1.01       1.01       1.01       1.01       -          1.01       1.01       1.01       1.01       1.01       -        
+qcd    	lnN       -          -          -          -          -          -          -          1.5        -          -          -          -          -          -        
+qcd1   	lnN       -          -          -          -          -          -          -          -          -          -          -          -          -          1.5      

@@ -2,15 +2,15 @@ imax 1
 jmax 8
 kmax *
 ---------------
-shapes * * Renamed_Datacard_oldGT_2j2525_2bt_highestJetPt.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes * * Renamed_Datacard_2j2525_2bt_highestJetPt.root $PROCESS $PROCESS_$SYSTEMATIC
 ---------------
 bin hzz
-observation 5946.0
+observation 4779.0
 ------------------------------
 bin             hzz	hzz	hzz	hzz	hzz	hzz	hzz	hzz	hzz	
 process         Wbb	Wcc	TOP	T	Tbar	tW	Z_jets	WZ	QCD	
 process         0	1	2	3	4	5	6	7	8	
-rate		978.5	58.2	2980.7	667.95	216.2	97.3	165.0	121.7	170.1
+rate		809.5	49.5	2390.1	517.4	188.1	73.6	143.7	99.6	164.3
 --------------------------------
 bgTOP    lnN    -	-	1.2	-	-	-	-	-	-
 bgT      lnN    -	-	-	1.08	-	-	-	-	-

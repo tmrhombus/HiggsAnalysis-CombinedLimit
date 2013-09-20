@@ -7,12 +7,13 @@ Author: T.M.Perry
 import ROOT
 from ROOT import *
 
-inFilename = 'Datacard_oldGT_4j2525_2bt_mJ3J4.root'
-inFile = TFile(inFilename)
+inFilename = 'Datacard_4j2525_2bt_mJ3J4'
+inFile = TFile(inFilename+'.root')
 
-outFile=gROOT.FindObject('Renamed_'+inFilename)
+outFile=gROOT.FindObject('Renamed_'+inFilename+'.root')
 if outFile : outFile.Close()
-outFile = TFile('Renamed_'+inFilename,'RECREATE','renamed histograms')
+outFile = TFile('Renamed_'+inFilename+'.root','RECREATE','renamed histograms')
+log = open(inFilename+'.log','a')
 
 # Unshifted
 data_obs_INFILE = inFile.Get("dataih")
@@ -52,6 +53,19 @@ WZ.SetName("WZ")
 QCD_INFILE = inFile.Get("qhNo")
 QCD = QCD_INFILE.Clone()
 QCD.SetName("QCD")
+
+log.write('\n\n')
+log.write("data:   "+str(data_obs.Integral())+'\n')
+log.write("Wbb:    "+str(Wbb.Integral())     +'\n')
+log.write("TOP:    "+str(TOP.Integral())     +'\n')
+log.write("Wcc:    "+str(Wcc.Integral())     +'\n')
+log.write("T:      "+str(T.Integral())       +'\n')
+log.write("Tbar:   "+str(Tbar.Integral())    +'\n')
+log.write("tW:     "+str(tW.Integral())      +'\n')
+log.write("Z_jets: "+str(Z_jets.Integral())  +'\n')
+log.write("WZ:     "+str(WZ.Integral())      +'\n')
+log.write("QCD:    "+str(QCD.Integral())     +'\n')
+log.close()
 
 # muon up
 Wbb_INFILE_muonUp = inFile.Get("wbbihUp")

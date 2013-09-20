@@ -21,6 +21,7 @@ log = open(inFilename+'.log','a')
 data_obs_INFILE = inFile.Get("dataih")
 data_obs = data_obs_INFILE.Clone()
 data_obs.SetName("data_obs")
+data_obs.Rebin(rebin)
 
 Wbb_INFILE = inFile.Get("wbbihNo")
 Wbb = Wbb_INFILE.Clone()

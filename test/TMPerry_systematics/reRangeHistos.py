@@ -15,23 +15,20 @@ inFilenames =  [
 for inFilename in inFilenames:
  inFile = TFile(inFilename+'.root')
  
- outFile=gROOT.FindObject('Data_'+inFilename+'.root')
+ outFile=gROOT.FindObject('ReRanged_'+inFilename+'.root')
  if outFile : outFile.Close()
- outFile = TFile('New_'+inFilename+'.root','RECREATE','xaxis as bin number')
+ outFile = TFile('ReRanged_'+inFilename+'.root','RECREATE','xaxis as bin number')
   
  for key in inFile.GetListOfKeys():
   obj = key.ReadObj()
   if(obj.IsA().InheritsFrom("TH1")):
-   h_name = "new_%s"%(obj.GetName())
    h_name = obj.GetName()
    nBins = obj.GetNbinsX()
-   obj.Integral()
    h_new = TH1F(h_name,h_name,nBins+1,0,nBins+1)
    for i in xrange(1,nBins+2):
     h_new.SetBinContent(i,obj.GetBinContent(i))
-   print h_new.GetName()
-   h_new.SetName(h_name)
-   print h_new.Integral()
+   #print h_new.GetName()
+   #print h_new.Integral()
    outFile.cd()
    outFile.Write()
   

@@ -38,7 +38,7 @@ protected:
   static std::string out_; 
   static bool        makePlots_;
   static float       rebinFactor_;
-  static std::string signalPdfNames_, backgroundPdfNames_;
+  static std::string signalPdfNames_, backgroundPdfNamesA_, backgroundPdfNamesB_;
   static bool        saveNormalizations_;
   static bool        oldNormNames_;
   static bool        saveShapes_;

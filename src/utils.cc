@@ -425,7 +425,7 @@ void utils::guessChannelMode(RooSimultaneous &simPdf, RooAbsData &simData, bool 
 }
 
 std::vector<RooPlot *>
-utils::makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signalSel, const char *backgroundSel, float rebinFactor) {
+utils::makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signalSel, const char *backgroundSelA, const char *backgroundSelB, float rebinFactor) {
     std::vector<RooPlot *> ret;
     RooArgList constraints;
     RooAbsPdf *facpdf = factorizePdf(*data.get(0), const_cast<RooAbsPdf &>(pdf), constraints);
@@ -448,7 +448,8 @@ utils::makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signa
             ret.back()->SetName(ds->GetName());
             ds->plotOn(ret.back(), RooFit::DataError(RooAbsData::Poisson));
             if (signalSel && strlen(signalSel))         pdfi->plotOn(ret.back(), RooFit::LineColor(209), RooFit::Components(signalSel));
-            if (backgroundSel && strlen(backgroundSel)) pdfi->plotOn(ret.back(), RooFit::LineColor(206), RooFit::Components(backgroundSel));
+            if (backgroundSelA && strlen(backgroundSelA)) pdfi->plotOn(ret.back(), RooFit::LineColor(206), RooFit::Components(backgroundSelA));
+            if (backgroundSelB && strlen(backgroundSelB)) pdfi->plotOn(ret.back(), RooFit::LineColor(214), RooFit::Components(backgroundSelB));
             pdfi->plotOn(ret.back());
             delete ds;
         }
@@ -461,7 +462,8 @@ utils::makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signa
             ret.back()->SetName("data");
             data.plotOn(ret.back(), RooFit::DataError(RooAbsData::Poisson));
             if (signalSel && strlen(signalSel))         pdf.plotOn(ret.back(), RooFit::LineColor(209), RooFit::Components(signalSel));
-            if (backgroundSel && strlen(backgroundSel)) pdf.plotOn(ret.back(), RooFit::LineColor(206), RooFit::Components(backgroundSel));
+            if (backgroundSelA && strlen(backgroundSelA)) pdf.plotOn(ret.back(), RooFit::LineColor(206), RooFit::Components(backgroundSelA));
+            if (backgroundSelB && strlen(backgroundSelB)) pdf.plotOn(ret.back(), RooFit::LineColor(214), RooFit::Components(backgroundSelB));
             pdf.plotOn(ret.back());
         }
     }

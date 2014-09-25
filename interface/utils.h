@@ -67,7 +67,7 @@ namespace utils {
     void tdrStyle() ;
     
     /// make plots, if possible
-    std::vector<RooPlot *> makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signalSel=0, const char *backgroundSel=0, float rebinFactor=1.0);
+    std::vector<RooPlot *> makePlots(const RooAbsPdf &pdf, const RooAbsData &data, const char *signalSel=0, const char *backgroundSelA=0, const char *backgroundSelB=0, float rebinFactor=1.0);
 
     struct CheapValueSnapshot {
         public:

@@ -1,5 +1,3 @@
-## TO DO: merge Wc and Wcc
-
 #!/usr/bin/env python
 '''
 Resize histograms for 8TeV datacards 
